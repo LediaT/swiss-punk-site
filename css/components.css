@@ -1,0 +1,112 @@
+ /* ===================================
+   COMPONENTS
+   Reusable Swiss Punk UI Elements
+   =================================== */
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-lg);
+  font-weight: var(--font-black);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: var(--border-thick) solid var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  letter-spacing: var(--tracking-wide);
+}
+
+.btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* === CARDS === */
+.card {
+  background-color: var(--color-white);
+  border: var(--border-thick) solid var(--color-black);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translate(-4px, -4px) rotate(1deg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* === QUOTE BOX === */
+.quote-box {
+  background-color: var(--color-gray-lighter);
+  border-left: var(--border-heavy) solid var(--color-primary);
+  padding: var(--space-xl);
+  margin: var(--space-2xl) 0;
+  transform: rotate(-1deg);
+}
+
+.quote-box p {
+  font-size: var(--text-xl);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.quote-box cite {
+  font-style: normal;
+  font-weight: var(--font-bold);
+  font-size: var(--text-base);
+}
+
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  padding-left: var(--space-3xl);
+  margin: var(--space-2xl) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--border-thick);
+  background-color: var(--color-black);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-lg);
+  background-color: var(--color-gray-lighter);
+  border: var(--border-medium) solid var(--color-black);
+}
+
+.timeline-date {
+  font-weight: var(--font-black);
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+/* === SECTION TITLE === */
+.section-title {
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 120%;
+  height: 4px;
+  background-color: var(--color-primary);
+  transform: rotate(-2deg);
+}
