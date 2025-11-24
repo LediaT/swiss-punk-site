@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -440,21 +440,18 @@
   <header class="site-header" role="banner">
     <div class="container">
       <div class="header-content">
-        <a href="/" class="site-logo" aria-label="Swiss Punk - Home">
+        <a href="/swiss-punk-site/" class="site-logo" aria-label="Swiss Punk - Home">
           <span>SWISS</span>
           <span>PUNK</span>
         </a>
         
         <nav class="main-nav" aria-label="Main navigation" role="navigation">
           <ul role="list">
-            {% for item in site.navigation %}
-            <li>
-              <a href="{{ item.url }}" 
-                 {% if page.url == item.url %}aria-current="page"{% endif %}>
-                {{ item.name }}
-              </a>
-            </li>
-            {% endfor %}
+            <li><a href="/swiss-punk-site/">HOME</a></li>
+            <li><a href="/swiss-punk-site/history/">HISTORY</a></li>
+            <li><a href="/swiss-punk-site/principles/">PRINCIPLES</a></li>
+            <li><a href="/swiss-punk-site/examples/">EXAMPLES</a></li>
+            <li><a href="/swiss-punk-site/about/">ABOUT</a></li>
           </ul>
         </nav>
       </div>
