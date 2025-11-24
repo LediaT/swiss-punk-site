@@ -1,4 +1,4 @@
- module.exports = function(eleventyConfig) {
+module.exports = function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
@@ -11,15 +11,6 @@
       month: 'long',
       day: 'numeric'
     });
-  });
-
-  // Create collections
-  eleventyConfig.addCollection("blog", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md");
-  });
-
-  eleventyConfig.addCollection("projects", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/projects/*.md");
   });
 
   return {

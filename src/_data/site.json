@@ -5,7 +5,7 @@
   "author": "Ledia",
   "email": "your-email@njit.edu",
   "url": "https://lediat.github.io/swiss-punk-site",
-  "buildTime": "2024",
+  "buildTime": "2025",
   "social": {
     "github": "https://github.com/LediaT",
     "linkedin": "https://linkedin.com/in/yourusername"
@@ -13,23 +13,23 @@
   "navigation": [
     {
       "name": "Home",
-      "url": "/swiss-punk-site/"
+      "url": "/"
     },
     {
       "name": "History",
-      "url": "/swiss-punk-site/history/"
+      "url": "/history/"
     },
     {
       "name": "Principles",
-      "url": "/swiss-punk-site/principles/"
+      "url": "/principles/"
     },
     {
       "name": "Examples",
-      "url": "/swiss-punk-site/examples/"
+      "url": "/examples/"
     },
     {
       "name": "About",
-      "url": "/swiss-punk-site/about/"
+      "url": "/about/"
     }
   ]
 }
