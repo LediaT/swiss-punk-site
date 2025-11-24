@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Swiss Punk typography">
+  <title>Home | Swiss Punk</title>
+  
+  <style>
+    /* ===================================
+       SWISS PUNK DESIGN SYSTEM - INLINE
+       =================================== */
+    
+    :root {
+      --color-black: #000000;
+      --color-white: #FFFFFF;
+      --color-primary: #FF0000;
+      --color-secondary: #0000FF;
+      --color-accent: #FFFF00;
+      --color-gray-lighter: #F0F0F0;
+      
+      --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-secondary: 'Arial Black', 'Arial Bold', sans-serif;
+      
+      --text-base: 1rem;
+      --text-lg: 1.25rem;
+      --text-xl: 1.5rem;
+      --text-2xl: 2rem;
+      --text-3xl: 2.5rem;
+      --text-4xl: 3rem;
+      --text-6xl: 5rem;
+      
+      --font-bold: 700;
+      --font-black: 900;
+      
+      --leading-tight: 1.1;
+      --leading-normal: 1.5;
+      --leading-loose: 1.8;
+      
+      --tracking-tight: -0.05em;
+      --tracking-wide: 0.1em;
+      --tracking-wider: 0.2em;
+      
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+      --space-4xl: 6rem;
+      
+      --max-width: 1400px;
+      --container-padding: var(--space-lg);
+      
+      --border-medium: 2px;
+      --border-thick: 4px;
+      
+      --shadow-md: 4px 4px 0 var(--color-black);
+      --shadow-lg: 8px 8px 0 var(--color-black);
+      
+      --transition-fast: 150ms ease;
+    }
+    
+    /* RESET */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: var(--font-primary);
+      font-size: var(--text-base);
+      line-height: var(--leading-normal);
+      color: var(--color-black);
+      background-color: var(--color-white);
+      overflow-x: hidden;
+    }
+    
+    /* TYPOGRAPHY */
+    h1, h2, h3 {
+      font-weight: var(--font-black);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-md);
+    }
+    
+    h1 {
+      font-size: var(--text-6xl);
+      font-family: var(--font-secondary);
+      letter-spacing: var(--tracking-tight);
+      text-transform: uppercase;
+    }
+    
+    h2 {
+      font-size: var(--text-4xl);
+      font-family: var(--font-secondary);
+    }
+    
+    h3 {
+      font-size: var(--text-3xl);
+      letter-spacing: var(--tracking-wide);
+    }
+    
+    p {
+      margin-bottom: var(--space-md);
+      max-width: 70ch;
+    }
+    
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      transition: all var(--transition-fast);
+    }
+    
+    a:hover {
+      color: var(--color-secondary);
+      text-decoration-thickness: 4px;
+    }
+    
+    ul { list-style: none; }
+    
+    strong { font-weight: var(--font-black); }
+    
+    /* LAYOUT */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+    
+    .site-header {
+      padding: var(--space-xl) 0;
+      border-bottom: var(--border-thick) solid var(--color-black);
+      background-color: var(--color-white);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+    }
+    
+    .site-logo {
+      font-size: var(--text-4xl);
+      font-weight: var(--font-black);
+      font-family: var(--font-secondary);
+      text-transform: uppercase;
+      transform: rotate(-2deg);
+      text-decoration: none;
+      color: var(--color-black);
+    }
+    
+    .site-logo span:nth-child(1) { color: var(--color-primary); }
+    .site-logo span:nth-child(2) { color: var(--color-black); }
+    
+    .main-nav ul {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: var(--text-lg);
+      font-weight: var(--font-bold);
+      text-decoration: none;
+      padding: var(--space-sm) var(--space-md);
+      border: var(--border-medium) solid var(--color-black);
+      background-color: var(--color-white);
+      color: var(--color-black);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      transition: all var(--transition-fast);
+    }
+    
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      background-color: var(--color-black);
+      color: var(--color-white);
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    main {
+      min-height: 60vh;
+      padding: var(--space-3xl) 0;
+    }
+    
+    .site-footer {
+      border-top: var(--border-thick) solid var(--color-black);
+      padding: var(--space-2xl) 0;
+      margin-top: var(--space-4xl);
+      background-color: var(--color-gray-lighter);
+      text-align: center;
+    }
+    
+    .section {
+      padding: var(--space-3xl) 0;
+    }
+    
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-4xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 40%;
+      height: 60%;
+      background-color: var(--color-secondary);
+      opacity: 0.1;
+      transform: rotate(-15deg);
+      z-index: -1;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      right: -10%;
+      width: 40%;
+      height: 60%;
+      background-color: var(--color-primary);
+      opacity: 0.1;
+      transform: rotate(15deg);
+      z-index: -1;
+    }
+    
+    .hero-title {
+      font-size: clamp(var(--text-4xl), 10vw, var(--text-6xl));
+      line-height: 0.9;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-subtitle {
+      font-size: var(--text-2xl);
+      letter-spacing: var(--tracking-wider);
+    }
+    
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+    
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+    }
+    
+    /* COMPONENTS */
+    .card {
+      background-color: var(--color-white);
+      border: var(--border-thick) solid var(--color-black);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .card ul {
+      list-style-type: square;
+      padding-left: var(--space-lg);
+    }
+    
+    .section-title {
+      margin-bottom: var(--space-2xl);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 120%;
+      height: 4px;
+      background-color: var(--color-primary);
+      transform: rotate(-2deg);
+    }
+    
+    /* SWISS PUNK CLASSES */
+    .text-rotate-3 {
+      transform: rotate(3deg);
+      display: inline-block;
+    }
+    
+    .text-rotate-neg-3 {
+      transform: rotate(-3deg);
+      display: inline-block;
+    }
+    
+    /* ANIMATIONS */
+    .stagger-items > *:nth-child(1) { animation: fadeIn 0.5s ease-out 0.1s backwards; }
+    .stagger-items > *:nth-child(2) { animation: fadeIn 0.5s ease-out 0.2s backwards; }
+    .stagger-items > *:nth-child(3) { animation: fadeIn 0.5s ease-out 0.3s backwards; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .two-col, .three-col { grid-template-columns: 1fr; }
+      h1 { font-size: var(--text-4xl); }
+      .main-nav ul { flex-direction: column; width: 100%; }
+      .main-nav a { display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="site-logo">
+          <span>SWISS</span>
+          <span>PUNK</span>
+        </a>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            
+            <li>
+              <a href="/" 
+                 aria-current="page">
+                Home
+              </a>
+            </li>
+            
+            <li>
+              <a href="/history/" 
+                 >
+                History
+              </a>
+            </li>
+            
+            <li>
+              <a href="/principles/" 
+                 >
+                Principles
+              </a>
+            </li>
+            
+            <li>
+              <a href="/examples/" 
+                 >
+                Examples
+              </a>
+            </li>
+            
+            <li>
+              <a href="/about/" 
+                 >
+                About
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+<style>
+  /* Additional page styles */
+  .hero { background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(0,0,255,0.1) 100%); }
+</style>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">
+      <span class="text-rotate-neg-3" style="display: block; color: #FF0000;">BREAK</span>
+      <span class="text-rotate-3" style="display: block; color: #000;">THE</span>
+      <span class="text-rotate-neg-3" style="display: block; color: #0000FF;">GRID</span>
+    </h1>
+    <p class="hero-subtitle" style="color: #000; font-weight: 700;">
+      Swiss Punk Typography · New Wave Design · 1970s Rebellion
+    </p>
+  </div>
+</section>
+
+<section class="section" style="background: #fff;">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2 class="section-title" style="color: #FF0000;">What is Swiss Punk?</h2>
+      </div>
+      <div>
+        <p style="font-size: 1.5rem; line-height: 1.8;">
+          <strong>Swiss Punk</strong> emerged in the <span style="background-color: #FFFF00; padding: 0 4px;">1970s</span> as a rebellious response to rigid Swiss typography.
+        </p>
+        <p style="font-size: 1.125rem;">
+          Led by <strong>Wolfgang Weingart</strong>, this movement embraced chaos, intuition, and expression.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #000; color: #fff; padding: 4rem 0;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 3rem; color: #FFFF00; font-size: 3rem;">
+      KEY CHARACTERISTICS
+    </h2>
+    
+    <div class="three-col stagger-items">
+      <div class="card" style="background: #fff; color: #000; transform: rotate(-2deg);">
+        <h3 style="color: #FF0000; font-size: 2rem; margin-bottom: 1rem;">Typography</h3>
+        <ul style="list-style-type: square; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Mixed typefaces & weights</li>
+          <li>Diagonal and rotated text</li>
+          <li>Inconsistent letter spacing</li>
+          <li>Bold stair-stepped layouts</li>
+        </ul>
+      </div>
+      
+      <div class="card" style="background: #FF0000; color: #fff; transform: rotate(1deg);">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Layout</h3>
+        <ul style="list-style-type: square; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Breaking the grid system</li>
+          <li>Asymmetric compositions</li>
+          <li>Layered collage elements</li>
+          <li>Chaotic but intentional</li>
+        </ul>
+      </div>
+      
+      <div class="card" style="background: #fff; color: #000; transform: rotate(-1deg);">
+        <h3 style="color: #0000FF; font-size: 2rem; margin-bottom: 1rem;">Philosophy</h3>
+        <ul style="list-style-type: square; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Intuition = Analysis</li>
+          <li>Expression over perfection</li>
+          <li>Anti-corporate aesthetic</li>
+          <li>Push limits of legibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        &copy; 2024 Ledia. 
+        Created for IS 218 - Building Web Applications.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

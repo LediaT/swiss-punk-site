@@ -1,0 +1,98 @@
+ /* ===================================
+   BASE STYLES
+   Swiss Punk Typography Foundation
+   =================================== */
+
+@import 'variables.css';
+@import 'reset.css';
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+/* === TYPOGRAPHY === */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-black);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--text-6xl);
+  font-family: var(--font-secondary);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--text-4xl);
+  font-family: var(--font-secondary);
+  letter-spacing: var(--tracking-normal);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+  letter-spacing: var(--tracking-wide);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+
+h5 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+}
+
+h6 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  max-width: 70ch;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration-thickness: 4px;
+}
+
+strong, b {
+  font-weight: var(--font-black);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* === SWISS PUNK CLASSES === */
+
+.text-rotate-3 {
+  transform: rotate(3deg);
+  display: inline-block;
+}
+
+.text-rotate-neg-3 {
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}

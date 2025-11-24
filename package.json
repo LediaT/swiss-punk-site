@@ -1,0 +1,23 @@
+ {
+  "name": "swiss-punk-design",
+  "version": "1.0.0",
+  "description": "A website showcasing Swiss Punk (New Wave) typography and design principles",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [
+    "swiss-punk",
+    "new-wave",
+    "typography",
+    "design",
+    "eleventy"
+  ],
+  "author": "Ledia",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {}
+}
